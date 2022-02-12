@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>To-Do_List</title>
+    <meta name="description" content="Java-Script-To-Do-List ">
+    <meta name="keywords" content="ToDoList">
+    <meta name="author" content="Marcin Szufnara">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pushster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ListStyle.css">
+    <script defer src="script.js"></script>
+</head>
+
+
+<body>
+    <div id="date"></div>
+    <h1 class="title">Task Need To be Done</h1>
+
+
+    <div class="all-tasks">
+        <h2 class="task-list-title">My lists</h2>
+        <ul class="task-list" data-lists></ul>
+
+        <form action="" data-new-list-form>
+            <input type="text" class="new list" data-new-list-input placeholder="new list name" aria-label="new list name" />
+            <button class="btn create" aria-label="create new list"><img src="./img/icon-plus.png" alt="Add Button"></button>
+        </form>
+    </div>
+
+    <div class="todo-list" data-list-display-container>
+        <div class="todo-header">
+            <h2 class="list-title" data-list-title></h2>
+            <p class="task-count" data-list-count></p>
+        </div>
+
+        <div class="todo-body">
+            <div class="tasks" data-tasks></div>
+
+            <div class="new-task-creator">
+                <form action="" data-new-task-form>
+                    <input type="text" data-new-task-input class="new task" placeholder="new task name" aria-label="new task name" />
+                    <button class="btn create" aria-label="create new task"><img src="./img/icon-plus.png" alt="Add Button"></button>
+                </form>
+            </div>
+
+            <div class="delete-stuff">
+                <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks <img src="./img/icon-sponge.png" alt="Wipe-Sponge"></button>
+                <button class="btn delete" data-delete-list-button>Delete list <img src="./img/icon-recycle-bin.png" alt="Recycle-Bin"></button>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox" />
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
+
+
+</body>
+
+</html>
